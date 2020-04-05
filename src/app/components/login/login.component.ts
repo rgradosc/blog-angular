@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  public page_title: string;
+
+  constructor() { 
+    this.page_title = 'Identificate';
+  }
 
   ngOnInit(): void {
   }
