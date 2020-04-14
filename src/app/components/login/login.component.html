@@ -1,4 +1,41 @@
 <h1>
     {{page_title}}
 </h1>
-<p>login works with angular!</p>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-md-6 ml-0 pl-0">
+            <div class="well well-sm">
+                <div class="col-md-12 alert alert-danger" *ngIf="status=='error'">
+                    <span> Login failed, send new request later. </span>
+                </div>
+                
+                <form class="form-horizontal ml-0 pl-0" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" class="form-control" #email="ngModel"
+                            [(ngModel)]="user.email" required
+                            pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+                        <small class="invalid-feedback d-block" *ngIf="!email.valid && email.touched">
+                            The data field email is not valid
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" name="password" type="password" class="form-control" #password="ngModel"
+                            [(ngModel)]="user.password" required>
+                        <small class="invalid-feedback d-block" *ngIf="!password.valid && password.touched">
+                            The data field password is not valid
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-primary" [disabled]="loginForm.invalid">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
