@@ -1,5 +1,6 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
 import { UserService } from "./services/user.services";
+import { global } from "./services/global";
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,13 @@ export class AppComponent {
   public title = 'blog-angular';
   public identity;
   public token;
+  public url:string;
 
   constructor(
     public _userService: UserService
   ){
     this.loadInfo();
+    this.url = global.url;
   }
 
   ngOnInit(){

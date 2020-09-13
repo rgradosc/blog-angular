@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.user_avatar--setings{
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.user_avatar--mask{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+    .user_avatar--mask img{
+        height: 40px;
+    }
