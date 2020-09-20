@@ -45,7 +45,11 @@ export class UserSettingsComponent implements OnInit {
     replaceTexts: {
       attachPinBtn: 'Select your avatar...',
     }
-};
+  };
+
+  public resetVar = {
+    
+  };
 
   constructor(
     private _userService: UserService
@@ -62,7 +66,7 @@ export class UserSettingsComponent implements OnInit {
                          this.identity.email, 
                          this.identity.password, 
                          this.identity.description, 
-                         this.identity.image)
+                         this.identity.image);
    }
 
   ngOnInit(): void {

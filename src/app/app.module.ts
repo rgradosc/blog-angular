@@ -13,6 +13,7 @@ import { from } from 'rxjs';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { UserSettingsComponent } from './components/user-settings/user-settings.component';
+import { CategoryCreateComponent } from './components/category-create/category-create.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UserSettingsComponent } from './components/user-settings/user-settings.
     RegisterComponent,
     HomeComponent,
     ErrorComponent,
-    UserSettingsComponent
+    UserSettingsComponent,
+    CategoryCreateComponent
   ],
   imports: [
     BrowserModule,

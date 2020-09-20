@@ -6,6 +6,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { UserSettingsComponent } from "./components/user-settings/user-settings.component";
+import { CategoryCreateComponent} from "./components/category-create/category-create.component";
 
 const appRoutes: Routes = [
     {path: '', component: HomeComponent},
@@ -14,6 +15,7 @@ const appRoutes: Routes = [
     {path: 'logout/:sure', component: LoginComponent},
     {path: 'register', component: RegisterComponent},
     {path: 'settings', component: UserSettingsComponent},
+    {path: 'new-category', component: CategoryCreateComponent},
     {path: '**', component: ErrorComponent}
 ];
 
